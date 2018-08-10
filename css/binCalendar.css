@@ -1,0 +1,116 @@
+#b-calendar *{
+  -moz-box-sizing: border-box; /*Firefox*/
+  -webkit-box-sizing: border-box; /*Safari*/
+  -o-box-sizing: border-box; /*Opera*/
+  -ms-box-sizing: border-box; /*IE*/
+  box-sizing: border-box;
+  font-family: '微軟正黑體';
+  text-align: center;
+}
+#b-calendar{
+  width: 245px;
+  padding: 10px;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+  border-radius: 5px;
+  background: #FFF3E6;
+  font-size: 13px;
+}
+#x-cale{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  right: 5px;
+  border-radius: 50%;
+  background: #111;
+  border: 3px solid #fff;
+  cursor: pointer;
+}
+#x-cale:after,#x-cale:before{
+  content:'';
+  width: 70%;
+  height: 3px;
+  position: absolute;
+  background: #fff;
+  top: 11px;
+  left: 4px;
+}
+#x-cale:after{
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#x-cale:before{
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#tb-day:after,#wk-d:after,.month-s-box:after{
+  content: '';
+  display: block;
+  width: 0;
+  clear: both;
+}
+#tb-day div ,#wk-d div{
+  float: left;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+}
+#wk-d div{
+  font-weight: 600;
+}
+#wk-d div:first-of-type{
+  color:#d00;
+}
+#wk-d div:last-of-type{
+  color:#090;
+}
+#year-s{
+  margin: 15px 0 5px 0;
+}
+.day-s{
+  cursor: pointer;
+}
+.icon{
+  display: inline-block;
+  padding: 5px;
+  background: #fa0;
+}
+.month-s-box{
+  margin: 5px 0;
+}
+.month-s-box div,.month-s-box select{
+  float: left;
+  width: 33.3333%;
+  height: 25px;
+  vertical-align: middle;
+}
+.month-s-box div{
+  cursor: pointer;
+  line-height: 25px;
+}
+.today{
+  color:#FF6600;
+}
+#preMon,#nextMon{position: relative;}
+#preMon:after,#nextMon:after{
+  content: '';
+  position: absolute;
+  top: 3px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+#preMon:after{
+  left: 0;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #5b5b5b transparent transparent;
+}
+#nextMon:after{
+  right: 0;
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #5b5b5b;
+}
